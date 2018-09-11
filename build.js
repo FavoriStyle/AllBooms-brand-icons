@@ -5,6 +5,7 @@ const {readFileSync: read, writeFileSync: write} = require('fs'),
     processPath = require('path').resolve,
     srcDir = processPath(__dirname, 'src'),
     distDir = processPath(__dirname, 'dist'),
+    cheerio = require('cheerio'),
     {ttf2eot, ttf2woff} = ($PATH => {
         return new Proxy({}, {
             get(target, name){
@@ -27,11 +28,12 @@ list(srcDir).forEach(file => {
     process.stdout.write(`Building ${name}... `);
     // Conversion to ttf
     var ttfTarget = processPath(distDir, `${name}.ttf`),
-        svgPath = processPath(srcDir, file);
+        svgPath = processPath(srcDir, file),
+        svgContent = read(svgPath, 'utf8');
     write(
         ttfTarget,
         Buffer.from(
-            svg2ttf(read(svgPath, 'utf8'), {}).buffer
+            svg2ttf(svgContent, {}).buffer
         )
     );
     // conversion from ttf to eot and woff
@@ -44,5 +46,16 @@ list(srcDir).forEach(file => {
     );
     // copying svg font to dist dir
     write(processPath(distDir, file), read(svgPath));
+    // generating css
+    const $ = cheerio.load(svgContent),
+        glyphs = $('svg > defs > font > glyph[unicode][glyph-name]');
+    if(!glyphs.length) throw new TypeError('There is no named glyphs in svg file');
+    var css = '';
+    Array.from(glyphs).forEach(glyph => {
+        css += `i.${name}-${glyph.attribs['glyph-name']}:before{content:"\\${glyph.attribs.unicode.charCodeAt(0).toString(16)}"}`
+    });
+    console.log('\n CSS To produce:');
+    console.log(css);
+    console.log('');
     console.log('done');
 });
