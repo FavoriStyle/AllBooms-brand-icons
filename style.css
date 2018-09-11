@@ -4,7 +4,7 @@
     font-weight: normal;
     font-style: normal;
 }
-[class^="allbooms-brand-icon-"], [class*=" allbooms-brand-icon-"]{
+[class^="allbooms-brand-icon-"]:before, [class*=" allbooms-brand-icon-"]:before{
     font-family: 'allbooms-brand-icons' !important;
     speak: none;
     font-style: normal;
@@ -15,6 +15,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.allbooms-brand-icon-allbooms:before{
+i.allbooms-brand-icon-allbooms:before{
     content: "\e900";
 }
