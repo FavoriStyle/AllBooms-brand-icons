@@ -1,0 +1,10 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+<font id="allbooms-brand-icons" horiz-adv-x="1024">
+<font-face units-per-em="1024" ascent="960" descent="-64" />
+<missing-glyph horiz-adv-x="1024" />
+<glyph unicode="&#x20;" horiz-adv-x="512" d="" />
+<glyph unicode="&#xe900;" glyph-name="allbooms" d="M0 959.999v-433.035h43.58v389.581h389.138v43.411h158.414v-43.411h389.307v-389.581h43.517v-157.738h-43.517v-389.666h-389.307v-43.538h432.866v1023.976zM591.132-63.978l-158.414-0.022h158.414zM432.718-63.978v43.538h-389.138v389.666h-43.58v-433.204zM509.633 651.684c-83.147 0-166.293-54.164-166.293-162.491v-254.848h82.133v83.485h167.983v-83.147h82.471v254.51c0 108.327-83.147 162.491-166.293 162.491zM509.464 571.262c41.996 0 83.992-27.356 83.992-82.069v-88.893h-167.984v88.893c0 54.713 41.996 82.069 83.992 82.069z" />
+</font></defs></svg>
