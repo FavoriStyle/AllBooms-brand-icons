@@ -1,0 +1,23 @@
+@font-face {
+	font-family: "allbooms-brand-icons";
+	src: url("allbooms-brand-icons.eot?849a465e37bcedb0944d91a316a85b32?#iefix") format("embedded-opentype"),
+url("allbooms-brand-icons.woff2?849a465e37bcedb0944d91a316a85b32") format("woff2"),
+url("allbooms-brand-icons.woff?849a465e37bcedb0944d91a316a85b32") format("woff"),
+url("allbooms-brand-icons.ttf?849a465e37bcedb0944d91a316a85b32") format("truetype"),
+url("allbooms-brand-icons.svg?849a465e37bcedb0944d91a316a85b32#allbooms-brand-icons") format("svg");
+}
+
+.allbooms-brand-icon {
+	line-height: 1;
+}
+
+.allbooms-brand-icon:before {
+	font-family: allbooms-brand-icons !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.allbooms-brand-icon-allbooms:before {
+	content: "\f101";
+}
