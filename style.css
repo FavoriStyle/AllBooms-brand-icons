@@ -5,7 +5,7 @@
     font-style: normal;
 }
 [class^="allbooms-brand-icon-"]:before, [class*=" allbooms-brand-icon-"]:before{
-    font-family: 'allbooms-brand-icons' !important;
+    font-family: 'AllBooms brand icons', 'allbooms-brand-icons' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
