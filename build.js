@@ -6,7 +6,7 @@ const {readFileSync: read, writeFileSync: write} = require('fs'),
     srcDir = processPath(__dirname, 'src'),
     distDir = processPath(__dirname, 'dist'),
     cheerio = require('cheerio'),
-    {ttf2eot, ttf2woff} = ($PATH => {
+    {ttf2eot, ttf2woff, svgo} = ($PATH => {
         return new Proxy({}, {
             get(target, name){
                 return (...args) => {
@@ -44,8 +44,8 @@ list(srcDir).forEach(file => {
         processPath(distDir, name + '.woff2'),
         ttf2woff2(read(ttfTarget))
     );
-    // copying svg font to dist dir
-    write(processPath(distDir, file), read(svgPath));
+    // compressing svg font to dist dir
+    svgo(svgPath, '-o', processPath(distDir, file));
     // generating css
     const $ = cheerio.load(svgContent),
         glyphs = $('svg > defs > font > glyph[unicode][glyph-name]');
