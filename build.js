@@ -50,12 +50,24 @@ list(srcDir).forEach(file => {
     const $ = cheerio.load(svgContent),
         glyphs = $('svg > defs > font > glyph[unicode][glyph-name]');
     if(!glyphs.length) throw new TypeError('There is no named glyphs in svg file');
-    var css = '';
+    var css = '@font-face{font-family:';
+    if(!glyphs[0].parent.attribs.id) throw new TypeError('Font has no "id" attribute');
+    var fontName = `"${glyphs[0].parent.attribs.id.replace('\\', '\\\\', '"', '\\"')}"`;
+    css += fontName +
+        ';src:url("' +
+        (name + '.woff2').replace('"', '\\"') + '")format("woff2"),url("' +
+        (name + '.woff').replace('"', '\\"') + '")format("woff"),url("' +
+        (name + '.ttf').replace('"', '\\"') + '")format("truetype"),url("' +
+        (name + '.eot').replace('"', '\\"') + '?#iefix")format("embedded-opentype"),url("' +
+        (name + '.svg').replace('"', '\\"') + '?#' + encodeURIComponent(glyphs[0].parent.attribs.id) + '")format("svg")}' +
+        `i[class^="${name}-"]:before,i[class*=" ${name}-"]:before{font-family:${fontName}!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}`
     Array.from(glyphs).forEach(glyph => {
         css += `i.${name}-${glyph.attribs['glyph-name']}:before{content:"\\${glyph.attribs.unicode.charCodeAt(0).toString(16)}"}`
     });
-    console.log('\n CSS To produce:');
-    console.log(css);
-    console.log('');
+    write(
+        processPath(distDir, name + '.css'),
+        css,
+        { encoding: 'utf-8' }
+    );
     console.log('done');
 });
