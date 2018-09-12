@@ -16,4 +16,4 @@ Next, to use some icon, add to your page following:
 where `ICON_NAME` is the name of the icon.
 
 Icon stack:
-> * allbooms (\e900) — AllBooms brand icon
+> * **allbooms** (\e900) — AllBooms brand icon
