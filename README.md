@@ -17,3 +17,4 @@ where `ICON_NAME` is the name of the icon.
 
 Icon stack:
 > * **allbooms** (\e900) — AllBooms brand icon
+> * **login** (\e901) — AllBooms login icon
