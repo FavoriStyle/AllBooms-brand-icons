@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="brand-allbooms" unicode="&#xe900;" d="M1000 850v-423h-43v381h-380v42h-154v-42h-380v-381h-43v-154h43v-381h380v-42h-423v1000z m-577-1000l154 0h-154z m154 0v42h380v381h43v-423z m-75 699c82 0 163-53 163-159v-249h-80v82h-164v-81h-81v248c0 106 81 159 162 159z m1-79c-41 0-82-26-82-80v-87h164v87c0 54-41 80-82 80z" horiz-adv-x="1000" />
+
+<glyph glyph-name="allbooms-login" unicode="&#xe901;" d="M339 850v-396h-339v-208h339v-396h423v42h-380v228l190 195 35 35-18 19 0 0-207 212v227h380v42h155v-42h380v-381h42v423z m423-1000v0h155z m80 699c-82 0-163-53-163-159v-248h81v81h164v-82h80v249c0 106-81 159-162 159z m-460-25l169-173-169-173v95h0v13h-43v130h43v11h0z m460-54c41 0 82-26 82-80v-87h-164v87c0 54 41 80 82 80z m-804-54h301v-130h-301z m1259-143v-381h-380v-42h422v423z" horiz-adv-x="1339" />
+
+<glyph glyph-name="brand-foodguide" unicode="&#xe902;" d="M705 850c-2 0-4 0-7 0-113-4-233-80-233-205v-370c0-8 13-17 23-17h100c0-107 0-214 0-321 0-48 39-87 87-87h0c37 0 69 24 82 57 4 9 5 20 5 30 0 286 0 573 0 859 0 42-20 54-57 54z m-668-4c-21 0-37-16-37-36v-26-199-1-119c0-26 68-81 94-87 0-147 0-294 0-441 0-2 0-4 0-6v-1c0-11 3-20 8-28 13-31 44-52 79-52h0c47 0 85 36 88 82 4 28 1 64 1 95v351c24 12 95 59 95 82v324h0v26c0 20-17 36-37 36-20 0-36-16-36-36v-26h0v-199c0-20-17-36-37-36-20 0-36 16-36 36v199h0v26c0 20-17 36-37 36-20 0-36-16-36-36v-26h0v-199c0-20-16-36-37-36-20 0-36 16-36 36v199h0v26c0 20-16 36-36 36z" horiz-adv-x="762" />
+</font>
+</defs>
+</svg>
